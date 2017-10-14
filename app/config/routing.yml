@@ -1,0 +1,11 @@
+acme_bonita:
+    resource: "@AcmeBonitaBundle/Resources/config/routing/main.yml"
+    prefix:   /
+
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation
+
+acme_bonita_user:
+    resource: "@AcmeBonitaBundle/Resources/config/routing/user.yml"
+    prefix:   /user

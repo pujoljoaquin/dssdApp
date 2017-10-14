@@ -1,0 +1,3 @@
+inicio:
+    pattern:  /
+    defaults: { _controller: "AcmeBonitaBundle:Main:inicio" }

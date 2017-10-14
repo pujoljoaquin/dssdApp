@@ -1,0 +1,9 @@
+{% extends 'base.html.twig' %}
+{% block titulo%}Bonita{%endblock%}
+{% block stylesheets %}
+  <link href="{{ asset ('css/myCSS.css') }}" type="text/css" rel="stylesheet" />
+{% endblock %}
+
+{% block contenido %}
+	{{ block('fos_user_content') }}
+{%endblock%} 
