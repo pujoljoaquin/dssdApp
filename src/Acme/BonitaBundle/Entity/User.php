@@ -9,40 +9,51 @@ use FOS\UserBundle\Entity\User as BaseUser;
  * User
  *
  * @ORM\Table(name="user")
- * @ORM\Entity(repositoryClass="Acme\BonitaBundle\Repository\UserRepository")
+ * @ORM\Entity
  */
 class User extends BaseUser
 {
     /**
      * @var int
      *
-     * @ORM\Column(name="id", type="integer")
+     * @ORM\Column(name="id", type="integer", nullable=false)
      * @ORM\Id
-     * @ORM\GeneratedValue(strategy="AUTO")
+     * @ORM\GeneratedValue(strategy="IDENTITY")
      */
     protected $id;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="nombre", type="string", length=255)
+     * @ORM\Column(name="nombre", type="string", length=255, nullable=false)
      */
-    private $nombre;
+    protected $nombre;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="apellido", type="string", length=255)
+     * @ORM\Column(name="apellido", type="string", length=255, nullable=false)
      */
-    private $apellido;
+    protected $apellido;
 
     /**
      * @var int
      *
-     * @ORM\Column(name="documento", type="integer")
+     * @ORM\Column(name="documento", type="integer", nullable=false)
      */
-    private $documento;
+    protected $documento;
 
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="tipo_empleado_id", type="integer", nullable=false)
+    */
+    protected $tipo_empleado_id;
+
+    public function __construct(){
+            parent::__construct();
+            $this->roles = array('ROLE_USER');
+    }
 
     /**
      * Get id
@@ -124,6 +135,30 @@ class User extends BaseUser
     public function getDocumento()
     {
         return $this->documento;
+    }
+
+    /**
+     * Get tipo_empleado_id
+     *
+     * @return integer
+     */
+    public function getTipoEmpleadoId(){
+        return $this->tipo_empleado_id;
+    }
+
+    /**
+     * Set tipo_empleado_id
+     *
+     * @param integer $tipo_empleado_id
+     * @return User
+     */
+    public function setTipoEmpleadoId($tipo_empleado_id){
+        return $this->tipo_empleado_id = $tipo_empleado_id;
+    }
+
+    public function getRole(){
+        $size = sizeof($this->getRoles());
+        return $this->getRoles()[$size - 1];
     }
 
 }

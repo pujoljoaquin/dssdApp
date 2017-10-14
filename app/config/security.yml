@@ -5,7 +5,6 @@ security:
 
     role_hierarchy:
         ROLE_USER:       ROLE_USER
-        ROLE_GESTION:     ROLE_GESTION
         ROLE_ADMIN: ROLE_ADMIN
 
     access_denied_url: /acceso_prohibido
@@ -65,13 +64,6 @@ security:
         - { path: ^/administrador/borrar, role: ROLE_ADMIN } ##Solo el usuario ADMIN puede entrar a paginas que comiencen con /admin
         - { path: ^/administrador/editar, role: ROLE_ADMIN } ##Solo el usuario ADMIN puede entrar a paginas que comiencen con /admin
         - { path: ^/administrador/actualizar, role: ROLE_ADMIN } ##Solo el usuario ADMIN puede entrar a paginas que comiencen con /admin
-        ##PRUEBA para dos roles --> - { path: ^/producto, role: [ROLE_GESTION, ROLE_USER] } ##Solo el usuario ADMIN puede entrar a paginas que comiencen con /admin
-        # - { path: ^/producto, role: ROLE_GESTION } ##Solo el usuario ADMIN puede entrar a paginas que comiencen con /admin
-        - { path: ^/administrador/usuarios/index, role: [ROLE_ADMIN, ROLE_GESTION] }
+        - { path: ^/administrador/usuarios/index, role: ROLE_ADMIN }
         - { path: ^/configuracion, role: ROLE_ADMIN }
-        - { path: ^/egreso, role: [ROLE_ADMIN, ROLE_GESTION] }
-        - { path: ^/ingreso, role: [ROLE_ADMIN, ROLE_GESTION] }
         - { path: ^/usuario/profile, role: IS_AUTHENTICATED_FULLY }
-        - { path: ^/balance, role: [ROLE_ADMIN, ROLE_GESTION] }
-        - { path: ^/producto, role: [ROLE_ADMIN, ROLE_GESTION] }
-        - { path: ^/pedido, role: [ROLE_USER, ROLE_ADMIN, ROLE_GESTION] }
