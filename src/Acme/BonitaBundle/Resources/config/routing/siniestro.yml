@@ -1,0 +1,8 @@
+siniestro_nuevo:
+    pattern:  /nuevo
+    defaults: { _controller: "AcmeBonitaBundle:Siniestro:nuevoSiniestro" }
+
+siniestro_crear:
+    pattern:  /crear
+    defaults: { _controller: "AcmeBonitaBundle:Siniestro:crearSiniestro" }
+    requirements: { _method: post }

@@ -9,3 +9,7 @@ app:
 acme_bonita_user:
     resource: "@AcmeBonitaBundle/Resources/config/routing/user.yml"
     prefix:   /user
+
+acme_bonita_siniestro:
+    resource: "@AcmeBonitaBundle/Resources/config/routing/siniestro.yml"
+    prefix:   /siniestro

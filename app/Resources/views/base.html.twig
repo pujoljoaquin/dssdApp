@@ -5,13 +5,13 @@
         <title>BonitaAAAA{% block titulo %}{% endblock %}</title>
         {% block stylesheets %}
         {% endblock %}
-     <!--   <link href="{{ asset ('csssdfdsfs/sfddsfmyCSS.css') }}" type="text/css" rel="stylesheet" />
+        <link href="{{ asset ('css/dssdCSS.css') }}" type="text/css" rel="stylesheet" />
         <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
         <link rel="stylesheet" href="/resources/demos/style.css">
         <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
         <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
         <link rel="stylesheet" type="text/css" href="{{ asset ('css/jquery.datetimepicker.css') }}"/>
-        <script src="{{ asset ('js/jquery.datetimepicker.full.min.js') }}"></script> -->
+        <script src="{{ asset ('js/jquery.datetimepicker.full.min.js') }}"></script> 
         <!-- <script src="jquery-3.1.1.js"></script>
         <script type="text/javascript" src="canvasjs.min.js"></script>
         <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
@@ -26,7 +26,7 @@
     </head>
     <body>
         <header class="mainHeader">
-            <h1> BONITA </h1>
+            <h1> Siniestros </h1>
         </header>
         <nav>
             <ul class="navbar">
@@ -40,6 +40,7 @@
                     {% endif %}
                     {% if (is_granted('ROLE_ADMIN')) %}
                     {% endif %}#}
+                    <li> <a href="{{ path('siniestro_nuevo') }}"> Crear siniestro </a></li>
                     <li> <a href="{{ path('fos_user_security_logout') }}"> Cerrar Sesion </a></li>
                     <p class="right" > Usuario: {{app.user.username}} </p>
                 {% else %}
@@ -50,15 +51,8 @@
 
 
         </nav>
-        <div class="columns">
-            <aside>
-                <p> BONITA </p>
-
-                <p> Mail de contacto: </p>
-            </aside>
-            <section style="height:auto;overflow:visible;">
-                {% block contenido %}{% endblock %}
-            </section>
+        <div>
+            {% block contenido %}{% endblock %}
         </div>
     </body>
 </html>
