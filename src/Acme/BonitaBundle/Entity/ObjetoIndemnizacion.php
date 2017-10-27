@@ -42,6 +42,13 @@ class ObjetoIndemnizacion
      */
     private $descripcion;
 
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="siniestro_id", type="integer")
+     */
+    private $siniestro_id;
+
 
     /**
      * Get id
@@ -123,6 +130,30 @@ class ObjetoIndemnizacion
     public function getDescripcion()
     {
         return $this->descripcion;
+    }
+
+    /**
+     * Set siniestroId
+     *
+     * @param integer $siniestroId
+     *
+     * @return ObjetoIndemnizacion
+     */
+    public function setSiniestroId($siniestroId)
+    {
+        $this->siniestro_id = $siniestroId;
+
+        return $this;
+    }
+
+    /**
+     * Get siniestroId
+     *
+     * @return int
+     */
+    public function getSiniestroId()
+    {
+        return $this->siniestro_id;
     }
 }
 

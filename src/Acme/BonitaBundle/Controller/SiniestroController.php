@@ -45,16 +45,18 @@ class SiniestroController extends Controller
         ));
         $form->add('submit', 'submit', array('label' => 'Nuevo Siniestro'));
         $form->handleRequest($request);
-
         if($form->isSubmitted() && $form->isValid()) {
 
-            $categoriaId = $form->getData()->getCategoriaId()->getId();
+            $tipoIncidenteId = $form->getData()->getTipoIncidenteId()->getId();
 
-            $siniestro->setCategoriaId($categoriaId);
+            $siniestro->setTipoIncidenteId($tipoIncidenteId);
             $em = $this->getDoctrine()->getManager();
             $em->persist($siniestro);
+        var_dump('paso2');
             $em->flush();
-            return $this->redirect($this->generateUrl('siniestro'));
+        var_dump('paso');
+
+            return $this->redirect($this->generateUrl('siniestro_nuevo'));
         }
 
         return $this->render('AcmeBonitaBundle:Siniestro:nuevoSiniestro.html.twig', array(
