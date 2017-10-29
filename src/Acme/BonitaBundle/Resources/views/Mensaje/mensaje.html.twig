@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+{% block titulo%}Mensaje{%endblock%}
+{% block stylesheets %}
+  <link href="{{ asset ('css/dssdCSS.css') }}" type="text/css" rel="stylesheet" />
+{% endblock %}
+
+{% block contenido %}
+    <h2> {{ mensaje }} </h2>
+    <a class="button sombra" href="{{ path(volver) }}">Volver</a>
+{%endblock%}

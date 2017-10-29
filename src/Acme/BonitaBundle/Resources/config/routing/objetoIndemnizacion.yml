@@ -1,0 +1,7 @@
+objeto_indemnizacion_nuevo:
+    pattern:  /nuevo
+    defaults: { _controller: "AcmeBonitaBundle:ObjetoIndemnizacion:nuevoObjetoIndemnizacion" }
+
+objeto_indemnizacion_crear:
+    pattern:  /crear
+    defaults: { _controller: "AcmeBonitaBundle:ObjetoIndemnizacion:crearObjetoIndemnizacion" }

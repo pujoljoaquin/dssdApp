@@ -17,9 +17,10 @@ class SiniestroType extends AbstractType
        $builder->add('nroCliente', 'integer', array('label' => 'Numero de Cliente', 'required' => true));
        $builder->add('tipoIncidenteId', 'entity', array('label' => 'Tipo de Incidente', 'class' => 'AcmeBonitaBundle:TipoIncidente', 'property' => 'tipoIncidente'));
        $builder->add('fechaIncidente', 'date', array('label' => 'Fecha', 'widget' => 'single_text'));
-       $builder->add('descripcionSiniestro', 'text', array('label' => 'Descripcion del siniestro', 'required' => true, 'pattern' => '[a-zA-Z]+', 'attr' => array('placeholder' => 'Solo se permiten letras')));
+       $builder->add('descripcionSiniestro', 'text', array('label' => 'Descripcion del siniestro', 'required' => true, 'attr' => array('placeholder' => 'Descripcion')));
+       $builder->add('cantidadObjetosIndemnizacion','hidden');
     }
-    
+
    /**
      * @param OptionsResolverInterface $resolver
      */

@@ -9,7 +9,7 @@ use Acme\BonitaBundle\Entity\Siniestro;
 use Acme\BonitaBundle\Form\SiniestroType;
 
 /**
- * Producto controller.
+ * Siniestro controller.
  */
 class SiniestroController extends Controller
 {
@@ -25,7 +25,7 @@ class SiniestroController extends Controller
             'action' => $this->generateUrl('siniestro_crear'),
             'method' => 'POST'
         ));
-        $form->add('submit', 'submit', array('label' => 'Crear'));
+        $form->add('submit', 'submit', array('label' => 'Agregar Objeto a Indemnizar'));
 
         return $this->render('AcmeBonitaBundle:Siniestro:nuevoSiniestro.html.twig', array(
             'form' => $form->createView()
@@ -43,18 +43,21 @@ class SiniestroController extends Controller
             'action' => $this->generateUrl('siniestro_crear'),
             'method' => 'POST'
         ));
-        $form->add('submit', 'submit', array('label' => 'Nuevo Siniestro'));
+        $form->add('submit', 'submit', array('label' => 'Agregar Objeto a Indemnizar'));
         $form->handleRequest($request);
-
         if($form->isSubmitted() && $form->isValid()) {
 
-            $categoriaId = $form->getData()->getCategoriaId()->getId();
+            $tipoIncidenteId = $form->getData()->getTipoIncidenteId()->getId();
 
-            $siniestro->setCategoriaId($categoriaId);
+            $siniestro->setTipoIncidenteId($tipoIncidenteId);
+            $siniestro->setCantidadObjetosIndemnizacion(0);
             $em = $this->getDoctrine()->getManager();
             $em->persist($siniestro);
             $em->flush();
-            return $this->redirect($this->generateUrl('siniestro'));
+
+            setcookie('siniestroId', $siniestro->getId(), 0,'/');
+
+            return $this->redirect($this->generateUrl('objeto_indemnizacion_nuevo'));
         }
 
         return $this->render('AcmeBonitaBundle:Siniestro:nuevoSiniestro.html.twig', array(

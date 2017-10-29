@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+{% block titulo%}Agregar Objeto a indemnizar{%endblock%}
+{% block stylesheets %}
+    <link href="{{ asset ('css/dssdCSS.css') }}" type="text/css" rel="stylesheet" />
+{% endblock %}
+
+{% block contenido %}
+    <h2 class="titulo"> Agregar Objeto a indemnizar </h2>
+    <div class="form">
+        {{ form_start(form) }}
+        <div class="campos-form">
+            <div class="columna-form">
+                {{ form_row(form.nombre) }}
+                {{ form_row(form.cantidad) }}
+                {{ form_row(form.descripcion) }}
+            </div>
+
+            <div class="boton-form">
+                {{ form_widget(form.submit) }}
+                {{ form_widget(form.submit) }}
+            </div>
+        </div>
+
+        {{ form_end(form) }}
+
+    </div>
+
+{%endblock%}

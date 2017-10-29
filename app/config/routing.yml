@@ -13,3 +13,7 @@ acme_bonita_user:
 acme_bonita_siniestro:
     resource: "@AcmeBonitaBundle/Resources/config/routing/siniestro.yml"
     prefix:   /siniestro
+
+acme_bonita_objeto_indemnizacion:
+    resource: "@AcmeBonitaBundle/Resources/config/routing/objetoIndemnizacion.yml"
+    prefix:   /objetoIndemnizacion
