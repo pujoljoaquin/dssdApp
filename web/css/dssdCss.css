@@ -1,316 +1,316 @@
-// body {
-//     background-image: url("backgroundDssd3.jpg");
-//     color: white;
-//     text-align: center;
-//     font-size: large;
-//     font-weight: bold;
-//     margin: 0;
-//     min-width: 300px;
-// }
-// .textLeft{
-//     text-align:left;
-// }
-// .half {
-//     width: 50%;
-// }
-// .left {
-//     float: left;
-// }
-// .threeColumns{
-//     width:26%;
-// }
-// .right{
-//     float:right;
-// }
+body {
+    background-image: url("backgroundDssd3.jpg");
+     color: white;
+     text-align: center;
+     font-size: large;
+     font-weight: bold;
+     margin: 0;
+     min-width: 300px;
+ }
+ .textLeft{
+     text-align:left;
+ }
+ .half {
+     width: 50%;
+ }
+ .left {
+     float: left;
+ }
+ .threeColumns{
+     width:26%;
+ }
+ .right{
+     float:right;
+ }
 
-// nav {
-//     margin-bottom: 20px;
-// }
+ nav {
+     margin-bottom: 20px;
+ }
 
-// ul.navbar {
-//     list-style-type: none;
-//     margin: 0;
-//     padding: 0;
-//     overflow: hidden;
-//     background: rgba(0, 0, 0, 0.71);
-// }
+ ul.navbar {
+     list-style-type: none;
+     margin: 0;
+     padding: 0;
+     overflow: hidden;
+     background: rgba(0, 0, 0, 0.71);
+ }
 
 
-// ul.navbar li {
-//     float: left;
-// }
-// ul.navbar li a {
-//     display: inline-block;
-//     color: white;
-//     text-align: center;
-//     padding: 14px 16px;
-//     text-decoration: none;
-//     font-size: 17px;
-// }
+ ul.navbar li {
+     float: left;
+ }
+ ul.navbar li a {
+     display: inline-block;
+     color: white;
+     text-align: center;
+     padding: 14px 16px;
+     text-decoration: none;
+     font-size: 17px;
+ }
 
-// ul.navbar li a:hover {
-//     background-color: black;
-// }
+ ul.navbar li a:hover {
+     background-color: black;
+ }
 
-// ul.navbar li.icon {
-//     display: none;
-// }
+ ul.navbar li.icon {
+     display: none;
+ }
 
-// li{
-//     list-style-type:none;
-// }
+ li{
+     list-style-type:none;
+ }
 
-// td {
-//     padding:3px;
-// }
+ td {
+     padding:3px;
+ }
 
-// @media screen and (max-width:680px) {
-//     ul.navbar li:not(:first-child) {
-//         display: none;
-//     }
+ @media screen and (max-width:680px) {
+     ul.navbar li:not(:first-child) {
+         display: none;
+     }
 
-//     ul.navbar li.icon {
-//         float: right;
-//         display: inline-block;
-//     }
-// }
+     ul.navbar li.icon {
+         float: right;
+         display: inline-block;
+     }
+ }
 
-// @media screen and (max-width:680px) {
-//     ul.navbar.responsive {
-//         position: relative;
-//     }
+ @media screen and (max-width:680px) {
+     ul.navbar.responsive {
+         position: relative;
+     }
 
-//         ul.navbar.responsive li.icon {
-//             position: absolute;
-//             right: 0;
-//             top: 0;
-//         }
+         ul.navbar.responsive li.icon {
+             position: absolute;
+             right: 0;
+             top: 0;
+         }
 
-//         ul.navbar.responsive li {
-//             float: none;
-//             display: inline;
-//         }
+         ul.navbar.responsive li {
+             float: none;
+             display: inline;
+         }
 
-//             ul.navbar.responsive li a {
-//                 display: block;
-//                 text-align: left;
-//             }
-// }
+             ul.navbar.responsive li a {
+                 display: block;
+                 text-align: left;
+             }
+ }
 
-// /* ClearFix */
+ /* ClearFix */
 
-// .columns:before,
-// .columns:after {
-//     content: "";
-//     display: table;
-// }
+ .columns:before,
+ .columns:after {
+     content: "";
+     display: table;
+ }
 
-// .columns:after {
-//     clear: both;
-// }
+ .columns:after {
+     clear: both;
+ }
 
-// .columns {
-//    height: 25%;
-//    /*height:auto;
-// overflow:visible; */
-// }
+ .columns {
+    height: 25%;
+    /*height:auto;
+ overflow:visible; */
+ }
 
-// .prueba {
-//    height:auto;
-// overflow:visible;
-// }
+ .prueba {
+    height:auto;
+ overflow:visible;
+ }
 
-// aside, section {
-//     float: left;
-//     margin: 0 1%;
-//     height: 400px;
-//     background: rgba(0, 0, 0, 0.71);
-//     border-radius: 25px;
-// }
+ aside, section {
+     float: left;
+     margin: 0 1%;
+     height: 400px;
+     background: rgba(0, 0, 0, 0.71);
+     border-radius: 25px;
+ }
 
-// aside {
-//     width: 25%;
-// }
+ aside {
+     width: 25%;
+ }
 
-// section {
-//     width: 71%;
-//     padding-bottom: 30px;
-// }
+ section {
+     width: 71%;
+     padding-bottom: 30px;
+ }
 
-// .botonClasico {
-//     color: #fff;
-//     background-color: #99ccff;
-//     border-color: #99ccff;
-//     display: inline-block;
-//     padding: 6px 12px;
-//     font-weight: bold;
-//     text-align: center;
-//     vertical-align: middle;
-//     cursor: pointer;
-//     border-radius: 4px;
-// }
+ .botonClasico {
+     color: #fff;
+     background-color: #99ccff;
+     border-color: #99ccff;
+     display: inline-block;
+     padding: 6px 12px;
+     font-weight: bold;
+     text-align: center;
+     vertical-align: middle;
+     cursor: pointer;
+     border-radius: 4px;
+ }
 
-// footer {
-//     background: rgba(0, 0, 0, 0.71);
-//     margin-bottom: 1%;
-//     margin-top: 1%;
-//     padding: 0.1%;
-// }
+ footer {
+     background: rgba(0, 0, 0, 0.71);
+     margin-bottom: 1%;
+     margin-top: 1%;
+     padding: 0.1%;
+ }
 
-// input, select {
-//     // width: 40%;
-//     width: 200px;
-//     padding: 5px 10px;
-//     margin: 5px 0;
-//     border: 1px solid #ccc;
-//     border-radius: 10px;
-//     box-sizing: border-box;
-// }
+ input, select {
+      width: 40%;
+     width: 200px;
+     padding: 5px 10px;
+     margin: 5px 0;
+     border: 1px solid #ccc;
+     border-radius: 10px;
+     box-sizing: border-box;
+ }
 
-// .formCampsLogin{
-//     width: 20%;
-// }
+ .formCampsLogin{
+     width: 20%;
+ }
 
-// // .form-balance button, .boton-form button, .button, #acme_bonitabundle_objetoIndemnizacion_submit1{
-// //     background-color: #52A0DC;
-// //     border: none;
-// //     color: white;
-// //     padding: 5px 10px;
-// //     text-align: center;
-// //     text-decoration: none;
-// //     display: inline-block;
-// //     font-size: 15px;
-// //     cursor: pointer;
-// //     -webkit-transition-duration: 0.4s;
-// //     transition-duration: 0.4s;
-// //     border-radius: 10px;
-// //     margin: 5px;
-// // }
+  .form-balance button, .boton-form button, .button, #acme_bonitabundle_objetoIndemnizacion_submit1{
+      background-color: #52A0DC;
+      border: none;
+      color: white;
+      padding: 5px 10px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 15px;
+      cursor: pointer;
+      -webkit-transition-duration: 0.4s;
+      transition-duration: 0.4s;
+      border-radius: 10px;
+      margin: 5px;
+  }
 
-// .sombra:hover {
-//     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
-// }
+ .sombra:hover {
+     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+ }
 
-// .edit-button {
-//     background:url("../images/background")  no-repeat;
-// }
+ .edit-button {
+     background:url("../images/background")  no-repeat;
+ }
 
-// .tabla {
-//     width: 100%;
-//     background-color: black;
-//     color: white;
-//     margin-top: 20px;
-// }
+ .tabla {
+     width: 100%;
+     background-color: black;
+     color: white;
+     margin-top: 20px;
+ }
 
-// .encabezado-tabla {
-//     background-color: white;
-//     color: black;
-// }
+ .encabezado-tabla {
+     background-color: white;
+     color: black;
+ }
 
-// .alinear-left {
-//     text-align: left;
-// }
+ .alinear-left {
+     text-align: left;
+ }
 
-// .form {
-//     display: block;
-//     margin: 20px;
-//     text-align: left;
-// }
+ .form {
+     display: block;
+     margin: 20px;
+     text-align: left;
+ }
 
-// .columna-form {
-//     float: left;
-//     width: 50%;
-// }
+ .columna-form {
+     float: left;
+     width: 50%;
+ }
 
-// .columna-form-left {
-//     float: left;
-//     width: 30%;
-//     margin-left: 20%;
-//     text-align: left;
-// }
+ .columna-form-left {
+     float: left;
+     width: 30%;
+     margin-left: 20%;
+     text-align: left;
+ }
 
-// .columna-form-right {
-//     float: left;
-//     width: 30%;
-//     margin-right: 20%;
-//     text-align: left;
-// }
+ .columna-form-right {
+     float: left;
+     width: 30%;
+     margin-right: 20%;
+     text-align: left;
+ }
 
-// .campos-form {
-//     text-align: center;
-// }
+ .campos-form {
+     text-align: center;
+ }
 
-// .form label {
-//     display: block;
-//     margin-bottom: 5px;
-// }
+ .form label {
+     display: block;
+     margin-bottom: 5px;
+ }
 
-// .form input, .form select {
-//     margin-bottom: 10px;
-// }
+ .form input, .form select {
+     margin-bottom: 10px;
+ }
 
-// .boton-form button {
-//     width: 100px;
-// }
+ .boton-form button {
+     width: 100px;
+ }
 
-// .boton-form .button {
-//     width: 100px;
-// }
+ .boton-form .button {
+     width: 100px;
+ }
 
-// .form-menu .checkbox-form input {
-//     -webkit-appearance: none;
-//     width: 20px;
-//     background-color: #fafafa;
-//     border: 1px solid #cacece;
-//     box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05);
-//     padding: 9px;
-//     border-radius: 3px;
-//     display: inline-block;
-//     position: relative;
-//     margin-bottom: -3px;
-//     margin-right: 10px;
-// }
+ .form-menu .checkbox-form input {
+     -webkit-appearance: none;
+     width: 20px;
+     background-color: #fafafa;
+     border: 1px solid #cacece;
+     box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05);
+     padding: 9px;
+     border-radius: 3px;
+     display: inline-block;
+     position: relative;
+     margin-bottom: -3px;
+     margin-right: 10px;
+ }
 
-// .form-menu .checkbox-form input:active, .form-menu .checkbox-form input:checked:active {
-//     box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px 1px 3px rgba(0,0,0,0.1);
-// }
+ .form-menu .checkbox-form input:active, .form-menu .checkbox-form input:checked:active {
+     box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px 1px 3px rgba(0,0,0,0.1);
+ }
 
-// .form-menu .checkbox-form input:checked {
-//     background-color: #e9ecee;
-//     border: 1px solid #adb8c0;
-//     box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05), inset 15px 10px -12px rgba(255,255,255,0.1);
-//     color: #99a1a7;
-// }
+ .form-menu .checkbox-form input:checked {
+     background-color: #e9ecee;
+     border: 1px solid #adb8c0;
+     box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05), inset 15px 10px -12px rgba(255,255,255,0.1);
+     color: #99a1a7;
+ }
 
-// .form-menu .checkbox-form input:checked:after {
-//     content: '\2714';
-//     font-size: 14px;
-//     position: absolute;
-//     top: 0px;
-//     left: 3px;
-//     color: #99a1a7;
-// }
+ .form-menu .checkbox-form input:checked:after {
+     content: '\2714';
+     font-size: 14px;
+     position: absolute;
+     top: 0px;
+     left: 3px;
+     color: #99a1a7;
+ }
 
-// .form-menu .campos-form label, .form-menu .checkbox-form label {
-//     margin-right: 10px;
-// }
+ .form-menu .campos-form label, .form-menu .checkbox-form label {
+     margin-right: 10px;
+ }
 
-// .form-menu .checkbox-form {
-//     margin-bottom: 20px;
-// }
+ .form-menu .checkbox-form {
+     margin-bottom: 20px;
+ }
 
-// .input-login, .form-balance label {
-//     display: block;
-// }
+ .input-login, .form-balance label {
+     display: block;
+ }
 
-// .label-login, .change-password-form label{
-//     display: block;
-// }
+ .label-login, .change-password-form label{
+     display: block;
+ }
 
-// .button-login {
-//     margin-top: 20px;
-// }
+ .button-login {
+     margin-top: 20px;
+ }
 
-// .change-password-form input {
-//     width: 200px;
-// }
+ .change-password-form input {
+     width: 200px;
+ }

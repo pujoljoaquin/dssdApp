@@ -1,5 +1,32 @@
-{% extends "FOSUserBundle::layout.html.twig" %}
+{% extends 'base.html.twig' %}
 
-{% block fos_user_content %}
-{% include "FOSUserBundle:Registration:register_content.html.twig" %}
-{% endblock fos_user_content %}
+{% block contenido %}
+
+<form action="{{ path('fos_user_registration_register') }}" {{ form_enctype(form) }} method="POST" class="fos_user_registration_register">
+    {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+    	<h3> {{ app.user.username }} ya estas logueado!!!! </h3>
+    {% else %}
+    	<h2 class="titulo"> Nuevo usuario </h2>
+	    <div class="form">
+        {{ form_start(form) }}
+        <div class="campos-form">
+            <div class="columna-form">
+            	{{ form_row(form.username) }}
+                {{ form_row(form.email) }}
+                {{ form_row(form.plainPassword) }}
+            </div>
+
+            <div class="columna-form">
+                {{ form_row(form.nombre) }}
+                {{ form_row(form.apellido) }}
+                {{ form_row(form.documento) }}
+            </div>
+	    <div>
+              <input type="submit" class="button sombra formCampsLogin"  value="{{ 'Registrarme'|trans({}, 'FOSUserBundle') }}" />
+	    </div>
+
+	     {{ form_end(form) }}
+    {% endif %}
+</form>
+
+{% endblock contenido %}

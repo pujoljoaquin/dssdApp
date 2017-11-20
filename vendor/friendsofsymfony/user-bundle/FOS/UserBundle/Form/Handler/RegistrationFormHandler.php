@@ -45,9 +45,6 @@ class RegistrationFormHandler
 
         if ('POST' === $this->request->getMethod()) {
             $this->form->bind($this->request);
-            $tipoEmpleadoId = $this->form->getData()->getTipoEmpleadoId()->getId();
-
-            $user->setTipoEmpleadoId($tipoEmpleadoId);
             if ($this->form->isValid()) {
                 $this->onSuccess($user, $confirmation);
 

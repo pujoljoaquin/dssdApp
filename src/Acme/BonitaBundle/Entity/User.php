@@ -43,13 +43,6 @@ class User extends BaseUser
      */
     protected $documento;
 
-    /**
-     * @var integer
-     *
-     * @ORM\Column(name="tipo_empleado_id", type="integer", nullable=false)
-    */
-    protected $tipo_empleado_id;
-
     public function __construct(){
             parent::__construct();
             $this->roles = array('ROLE_USER');
@@ -135,25 +128,6 @@ class User extends BaseUser
     public function getDocumento()
     {
         return $this->documento;
-    }
-
-    /**
-     * Get tipo_empleado_id
-     *
-     * @return integer
-     */
-    public function getTipoEmpleadoId(){
-        return $this->tipo_empleado_id;
-    }
-
-    /**
-     * Set tipo_empleado_id
-     *
-     * @param integer $tipo_empleado_id
-     * @return User
-     */
-    public function setTipoEmpleadoId($tipo_empleado_id){
-        return $this->tipo_empleado_id = $tipo_empleado_id;
     }
 
     public function getRole(){

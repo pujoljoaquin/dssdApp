@@ -31,6 +31,21 @@ class Siniestro
     /**
      * @var int
      *
+     * @ORM\Column(name="estado_id", type="integer")
+     */
+    private $estadoId;
+
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="usuario_id", type="integer")
+     */
+    private $usuarioId;
+
+
+    /**
+     * @var int
+     *
      * @ORM\Column(name="tipo_incidente_id", type="integer")
      */
     private $tipoIncidenteId;
@@ -209,5 +224,56 @@ class Siniestro
     {
         return $this->objetosIndemnizacion;
     }
+
+    /**
+     * Set estadoId
+     *
+     * @param integer $estadoId
+     *
+     * @return Siniestro
+     */
+    public function setEstadoId($estadoId)
+    {
+        $this->estadoId = $estadoId;
+
+        return $this;
+    }
+
+    /**
+     * Get estadoId
+     *
+     * @return int
+     */
+    public function getEstadoId()
+    {
+        return $this->estadoId;
+    }
+
+    /**
+     * Set usuarioId
+     *
+     * @param integer $usuarioId
+     *
+     * @return Siniestro
+     */
+    public function setUsuarioId($usuarioId)
+    {
+        $this->usuarioId = $usuarioId;
+
+        return $this;
+    }
+
+    /**
+     * Get usuarioId
+     *
+     * @return int
+     */
+    public function getUsuarioId()
+    {
+        return $this->usuarioId;
+    }
+
+
+
 }
 

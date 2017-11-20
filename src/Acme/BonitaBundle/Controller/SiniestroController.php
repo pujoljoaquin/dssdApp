@@ -6,6 +6,8 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 use Acme\BonitaBundle\Entity\Siniestro;
+use Acme\BuffetBundle\Entity\Estado;
+use Acme\BuffetBundle\Entity\TipoIncidente;
 use Acme\BonitaBundle\Form\SiniestroType;
 
 /**
@@ -48,9 +50,12 @@ class SiniestroController extends Controller
         if($form->isSubmitted() && $form->isValid()) {
 
             $tipoIncidenteId = $form->getData()->getTipoIncidenteId()->getId();
+            $idUsuarioActual = $this->container->get('security.context')->getToken()->getUser()->getId();
 
             $siniestro->setTipoIncidenteId($tipoIncidenteId);
             $siniestro->setCantidadObjetosIndemnizacion(0);
+            $siniestro->setEstadoId(1);
+            $siniestro->setUsuarioId($idUsuarioActual);
             $em = $this->getDoctrine()->getManager();
             $em->persist($siniestro);
             $em->flush();
@@ -63,6 +68,31 @@ class SiniestroController extends Controller
         return $this->render('AcmeBonitaBundle:Siniestro:nuevoSiniestro.html.twig', array(
             'form' => $form->createView()
         ));
+    }
+
+    public function indexSiniestrosAction(Request $request) {
+        $idUsuarioActual = $this->container->get('security.context')->getToken()->getUser()->getId();
+        $em = $this->getDoctrine()->getManager();
+        $repository = $em->getRepository('AcmeBonitaBundle:Siniestro')
+            ->createQueryBuilder('s')
+            ->where('s.usuarioId = :usuarioId')
+            ->setParameter(':usuarioId', $idUsuarioActual)
+            ->getQuery();
+        $siniestros = $repository->getResult();
+        $tipoSiniestros = $em->getRepository('AcmeBonitaBundle:TipoIncidente')->findAll();
+        $estadosSiniestros = $em->getRepository('AcmeBonitaBundle:Estado')->findAll();
+
+        //return $this->render('AcmeBonitaBundle:Siniestro:indexSiniestros.html.twig', array(
+           // 'tipoSiniestros' => $tipoSiniestros,
+           // 'estadosSiniestros' => $estadosSiniestros,
+          //  'form' => $form->createView()
+        //));
+
+        return $this->render('AcmeBonitaBundle:Siniestro:indexSiniestros.html.twig', array(
+            'tipoSiniestros' => $tipoSiniestros,
+            'estadosSiniestros' => $estadosSiniestros,
+            'siniestros' => $siniestros));
+
     }
 
 }
