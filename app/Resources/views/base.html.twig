@@ -2,7 +2,7 @@
 <html lang="es">
     <head>
         <meta charset="utf-8">
-        <title>BonitaAAAA{% block titulo %}{% endblock %}</title>
+        <title>{% block titulo %}{% endblock %}</title>
         {% block stylesheets %}
         {% endblock %}
         <link href="{{ asset ('css/dssdCss.css') }}" type="text/css" rel="stylesheet" />
@@ -26,13 +26,12 @@
     </head>
     <body>
         <header class="mainHeader">
-            <h1> Siniestros </h1>
+            <h1> Organización de Seguros </h1>
         </header>
         <nav>
             <ul class="navbar">
-                <li> <a href="{{ path('inicio') }}"> Inicio</a></li>
+                <li> <a href="{{ path('inicio') }}"> Inicio </a></li>
                 {% if is_granted('IS_AUTHENTICATED_FULLY') %}
-                    <li> <a href="{{ path('fos_user_profile_show') }}"> Mi perfil </a></li>
                     {# {% if (is_granted('ROLE_USER')) %}  #}
                      {# {% if (app.user.role == 'ROLE_USER') %}
                     {% endif %}
@@ -41,6 +40,7 @@
                     {% if (is_granted('ROLE_ADMIN')) %}
                     {% endif %}#}
                     <li> <a href="{{ path('siniestro_nuevo') }}"> Crear siniestro </a></li>
+                    <li> <a href="{{ path('siniestros') }}"> Mis siniestros </a></li>
                     <li> <a href="{{ path('fos_user_security_logout') }}"> Cerrar Sesion </a></li>
                     <p class="right" > Usuario: {{app.user.username}} </p>
                 {% else %}

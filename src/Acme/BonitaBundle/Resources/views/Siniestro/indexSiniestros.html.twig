@@ -4,37 +4,42 @@
 {% endblock %}
 
 {% block contenido %}
-    <h2> Mis siniestros</h2>
-    <div>
-        <table class="tabla">
-            <tr class="encabezado-tabla">
-                <th>Cliente</th>
-                <th>Tipo de siniestro</th>
-                <th>Fecha del siniestro</th>
-                <th>Descripcion del siniestro</th>
-                <th>Estado</th>
-            </tr>
-            {% for siniestro in siniestros %}
-                <tr>
-                    <td>{{ siniestro.nroCliente }}</td>
-                    {% set break = false %}
-                    {% for tipoSiniestro in tipoSiniestros if not break %}
-                        {% if (siniestro.tipoIncidenteId == tipoSiniestro.id) %}
-                            {% set break = true %}
-                            <td>{{ tipoSiniestro.tipoIncidente }}</td>
-                        {% endif %}
-                    {% endfor %}
-                    <td>{{ siniestro.fechaIncidente |date('d-m-Y')}}</td>
-                    <td>{{ siniestro.descripcionSiniestro }}</td>
-                    {% set break = false %}
-                    {% for estado in estadosSiniestros if not break %}
-                        {% if (siniestro.estadoId == estado.id) %}
-                            {% set break = true %}
-                            <td>{{ estado.nombre }}</td>
-                        {% endif %}
-                    {% endfor %}
+    {% if siniestros|length == 0 %}
+        <h3> Usted no posee siniestros registrados en el sistema. </h3>
+    {% else %}
+        <h2> Mis siniestros</h2>
+        <div>
+            <table class="tabla">
+                <tr class="encabezado-tabla">
+                    <th>Cliente</th>
+                    <th>Tipo de siniestro</th>
+                    <th>Fecha del siniestro</th>
+                    <th>Descripcion del siniestro</th>
+                    <th>Estado</th>
                 </tr>
-            {% endfor %}
-        </table>
-    </div>
+                {% for siniestro in siniestros %}
+                    <tr>
+                        <td>{{ siniestro.nroCliente }}</td>
+                        {% set break = false %}
+                        {% for tipoSiniestro in tipoSiniestros if not break %}
+                            {% if (siniestro.tipoIncidenteId == tipoSiniestro.id) %}
+                                {% set break = true %}
+                                <td>{{ tipoSiniestro.tipoIncidente }}</td>
+                            {% endif %}
+                        {% endfor %}
+                        <td>{{ siniestro.fechaIncidente |date('d-m-Y')}}</td>
+                        <td>{{ siniestro.descripcionSiniestro }}</td>
+                        {% set break = false %}
+                        {% for estado in estadosSiniestros if not break %}
+                            {% if (siniestro.estadoId == estado.id) %}
+                                {% set break = true %}
+                                <td>{{ estado.nombre }}</td>
+                            {% endif %}
+                        {% endfor %}
+                    </tr>
+                {% endfor %}
+            </table>
+        </div>
+    {% endif %}
+
 {%endblock%}

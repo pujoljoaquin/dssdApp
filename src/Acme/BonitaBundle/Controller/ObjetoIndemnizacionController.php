@@ -59,6 +59,25 @@ class ObjetoIndemnizacionController extends Controller
             if ($form->get('submit')->isClicked()) {
                 return $this->redirect($this->generateUrl('objeto_indemnizacion_nuevo'));
             } else {
+                $em = $this->getDoctrine()->getManager();
+                $query = $em->getRepository('AcmeBonitaBundle:ObjetoIndemnizacion')
+                     ->createQueryBuilder('o')
+                     ->where('o.siniestro_id = :idSiniestro')
+                     ->setParameter('idSiniestro', $_COOKIE['siniestroId'])
+                     ->getQuery();
+                $resultado = $query->getResult();
+                $i = 0;
+                $cantObjetosIndemnizar = 0;
+                while (isset($resultado[$i])) {
+                    $cantObjetosIndemnizar++;
+                    $i++;
+                };
+
+                $em = $this->getDoctrine()->getManager();
+                $siniestro = $em->getRepository('AcmeBonitaBundle:Siniestro')->find($_COOKIE['siniestroId']);
+                $siniestro->setCantidadObjetosIndemnizacion($cantObjetosIndemnizar);
+                $em->persist($siniestro);
+                $em->flush();
                 return $this->render('AcmeBonitaBundle:Mensaje:mensaje.html.twig', array(
                     'mensaje' => 'El siniestro ha sido creado con exito!',
                     'volver' => 'siniestro_nuevo'

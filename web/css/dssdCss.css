@@ -196,15 +196,15 @@ body {
  }
 
  .tabla {
-     width: 100%;
-     background-color: black;
+     width: 75%;
+     background-color: #21353f40;
      color: white;
-     margin-top: 20px;
+     margin-top: 4px;
  }
 
  .encabezado-tabla {
-     background-color: white;
-     color: black;
+     background-color: #21353f40;
+     color: #21353f40;
  }
 
  .alinear-left {
