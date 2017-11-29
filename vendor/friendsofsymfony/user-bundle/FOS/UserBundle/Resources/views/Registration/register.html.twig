@@ -7,22 +7,22 @@
     	<h3> {{ app.user.username }} ya estas logueado!!!! </h3>
     {% else %}
     	<h2 class="titulo"> Nuevo usuario </h2>
-	    <div class="form">
-        {{ form_start(form) }}
-        <div class="campos-form">
-            <div class="columna-form">
-            	{{ form_row(form.username) }}
-                {{ form_row(form.email) }}
-                {{ form_row(form.plainPassword) }}
-            </div>
-
-            <div class="columna-form">
-                {{ form_row(form.nombre) }}
-                {{ form_row(form.apellido) }}
-                {{ form_row(form.documento) }}
-            </div>
 	    <div>
-              <input type="submit" class="button sombra formCampsLogin"  value="{{ 'Registrarme'|trans({}, 'FOSUserBundle') }}" />
+        {{ form_start(form) }}
+            <div style="display:flex; justify-content:center;">
+                <div class="columna-form" style="margin-left: 30px; margin-right: 30px;">
+                	{{ form_row(form.username) }}
+                    {{ form_row(form.email) }}
+                    {{ form_row(form.plainPassword) }}
+                </div>
+
+                <div class="columna-form" style="margin-left: 30px; margin-right: 30px;">
+                    {{ form_row(form.nombre) }}
+                    {{ form_row(form.apellido) }}
+                    {{ form_row(form.documento) }}
+                    <input type="submit" class="button-login button "  value="{{ 'Registrarme'|trans({}, 'FOSUserBundle') }}" />
+                </div>
+    	    <div>
 	    </div>
 
 	     {{ form_end(form) }}

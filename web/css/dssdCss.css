@@ -1,6 +1,8 @@
 body {
     background-image: url("backgroundDssd3.jpg");
-     color: white;
+    background-size: cover;
+     color: black;
+     font-family: 'Advent Pro';
      text-align: center;
      font-size: large;
      font-weight: bold;
@@ -168,11 +170,11 @@ body {
  }
 
  .formCampsLogin{
-     width: 20%;
+     width: 170px;
  }
 
   .form-balance button, .boton-form button, .button, #acme_bonitabundle_objetoIndemnizacion_submit1{
-      background-color: #52A0DC;
+      background-color: #ffb871;
       border: none;
       color: white;
       padding: 5px 10px;
@@ -204,7 +206,7 @@ body {
 
  .encabezado-tabla {
      background-color: #21353f40;
-     color: #21353f40;
+     color: black;
  }
 
  .alinear-left {
@@ -218,19 +220,23 @@ body {
  }
 
  .columna-form {
-     float: left;
-     width: 50%;
+     // float: left;
+     width: 200px;
+ }
+
+ .columna-form-porcentaje {
+     width: 25%;
  }
 
  .columna-form-left {
-     float: left;
+     // float: left;
      width: 30%;
      margin-left: 20%;
      text-align: left;
  }
 
  .columna-form-right {
-     float: left;
+     // float: left;
      width: 30%;
      margin-right: 20%;
      text-align: left;
@@ -250,11 +256,11 @@ body {
  }
 
  .boton-form button {
-     width: 100px;
+     width: 200px;
  }
 
  .boton-form .button {
-     width: 100px;
+     width: 200px;
  }
 
  .form-menu .checkbox-form input {
@@ -308,9 +314,42 @@ body {
  }
 
  .button-login {
-     margin-top: 20px;
+    margin-top: 20px;
+ }
+  .button-login input {
+    background-color: #ffb871;
+    color: white;
+    cursor: pointer;
+    width: 170px;
+    border: 1px solid #ffb871;
  }
 
  .change-password-form input {
      width: 200px;
  }
+
+#acme_bonitabundle_objetoIndemnizacion_submit1 {
+    width: 200px;
+    margin-top: 20px;
+}
+
+.tabla-siniestros {
+    margin: auto;
+}
+
+.button-add-form button{
+      width: 200px;
+      background-color: #ffb871;
+      border: none;
+      color: white;
+      padding: 5px 10px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 15px;
+      cursor: pointer;
+      -webkit-transition-duration: 0.4s;
+      transition-duration: 0.4s;
+      border-radius: 10px;
+      margin: 0px !important;
+}
